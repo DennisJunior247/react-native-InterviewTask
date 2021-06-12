@@ -1,6 +1,6 @@
 import React from 'react';
 import {} from 'react-native';
-import Screen from './src/Screens/splashScreen';
+import Screen from './src/Screens/CategoriesScreen';
 
 const App = () => {
   return <Screen />;

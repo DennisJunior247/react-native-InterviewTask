@@ -6,6 +6,7 @@ import {
   Image,
   StatusBar,
   ImageBackground,
+  SafeAreaView,
 } from 'react-native';
 import AppText from '../Components/AppText';
 import CustomButton from '../Components/CustomButton';
@@ -13,7 +14,7 @@ import colors from '../Config/colors';
 
 const splashScreen = () => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <ImageBackground
         style={styles.logoContainer}
         source={require('../Assets/BG.png')}>
@@ -28,10 +29,10 @@ const splashScreen = () => {
         <View>
           <AppText
             color={colors.dark}
-            fontWeight={'700'}
-            fontSize={'large'}
+            fontWeight={'bold'}
+            fontSize={35}
             text={'Non-Contact \n Deliveries'}
-            TextStyle={styles.title}
+            textStyle={styles.title}
           />
           <AppText
             color={colors.grey}
@@ -40,7 +41,7 @@ const splashScreen = () => {
             text={
               'When placing an order, select the option “Contactless delivery” and the courier will leave your order at the door'
             }
-            TextStyle={styles.subtitle}
+            textStyle={styles.subtitle}
           />
         </View>
         <CustomButton
@@ -60,7 +61,7 @@ const splashScreen = () => {
           textColor={colors.grey}
         />
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

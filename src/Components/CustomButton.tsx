@@ -4,6 +4,7 @@ import {
   TouchableOpacity,
   GestureResponderEvent,
   Text,
+  ViewStyle,
 } from 'react-native';
 
 interface Props {
@@ -12,7 +13,7 @@ interface Props {
   backgroundColor: string;
   width: string | number;
   textColor: string;
-  ButtonStyle?: React.CSSProperties;
+  ButtonStyle?: ViewStyle;
 }
 
 const CustomButton = ({
