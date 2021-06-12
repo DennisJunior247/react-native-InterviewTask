@@ -1,14 +1,63 @@
 import React from 'react';
 import {
+  FlatList,
+  ImageSourcePropType,
+  Platform,
+  SafeAreaView,
+  StatusBar,
   StyleSheet,
   View,
-  Platform,
-  StatusBar,
-  SafeAreaView,
 } from 'react-native';
 import AppText from '../Components/AppText';
+import ItemCard from '../Components/CategoryCard';
 import SearchBar from '../Components/SearchBar';
 import colors from '../Config/colors';
+
+type datatype = {
+  title: string;
+  quantity: number;
+  image: ImageSourcePropType;
+  id?: number;
+}[];
+
+const DATA: datatype = [
+  {
+    title: 'Vegetables',
+    quantity: 43,
+    image: require('../Assets/categoryImages/Media.png'),
+    id: 1,
+  },
+  {
+    title: 'Vegetables',
+    quantity: 43,
+    image: require('../Assets/categoryImages/Media1.png'),
+    id: 2,
+  },
+  {
+    title: 'Vegetables',
+    quantity: 43,
+    image: require('../Assets/categoryImages/Media2.png'),
+    id: 3,
+  },
+  {
+    title: 'Vegetables',
+    quantity: 43,
+    image: require('../Assets/categoryImages/Media3.png'),
+    id: 4,
+  },
+  {
+    title: 'Vegetables',
+    quantity: 43,
+    image: require('../Assets/categoryImages/Media4.png'),
+    id: 5,
+  },
+  {
+    title: 'Vegetables',
+    quantity: 43,
+    image: require('../Assets/categoryImages/Media5.png'),
+    id: 6,
+  },
+];
 
 const CategoriesScreen = () => {
   return (
@@ -24,7 +73,23 @@ const CategoriesScreen = () => {
           <SearchBar placeholder={'Search'} />
         </View>
       </View>
-      <View style={styles.categoryItemsContainer} />
+      <View style={styles.categoryItemsContainer}>
+        <FlatList
+          showsVerticalScrollIndicator={false}
+          data={DATA}
+          renderItem={({item}) => (
+            <ItemCard
+              title={item.title}
+              quantity={item.quantity}
+              image={item.image}
+              onPress={() => {}}
+            />
+          )}
+          keyExtractor={item => item.id.toString()}
+          numColumns={2}
+          ItemSeparatorComponent={() => <View style={styles.seperator} />}
+        />
+      </View>
     </SafeAreaView>
   );
 };
@@ -33,7 +98,7 @@ export default CategoriesScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 10,
+    marginHorizontal: 10,
     backgroundColor: colors.primary,
   },
   headerContainer: {
@@ -46,7 +111,12 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
   categoryItemsContainer: {
-    backgroundColor: 'green',
+    backgroundColor: colors.primary,
     flex: 3,
+  },
+  seperator: {
+    width: '100%',
+    height: 40,
+    backgroundColor: colors.primary,
   },
 });
