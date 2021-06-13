@@ -13,7 +13,7 @@ const SearchBar = ({onPress, value, placeholder}: Props) => {
   return (
     <View style={styles.InputContainer}>
       <View style={styles.iconBox}>
-        <MaterialIcon size="extraLarge" color="#000000" name="search" />
+        <MaterialIcon size="large" color="#000000" name="search1" />
       </View>
       <TextInput
         style={styles.input}

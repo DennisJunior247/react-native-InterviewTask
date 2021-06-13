@@ -9,7 +9,7 @@ import {
 
 interface Props {
   onPress: (event: GestureResponderEvent) => void;
-  title: string;
+  title: string | JSX.Element;
   backgroundColor: string;
   width: string | number;
   textColor: string;
@@ -31,7 +31,7 @@ const CustomButton = ({
       style={[styles(backgroundColor, width).container, ButtonStyle]}
       onPress={onPress}>
       <Text style={[styles().text, {color: textColor}]}>
-        {icon &&<Text></Text>}
+        {icon && <Text>{icon}</Text>}
         {title}
       </Text>
     </TouchableOpacity>

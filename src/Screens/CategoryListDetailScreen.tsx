@@ -8,10 +8,9 @@ import {
   StyleSheet,
   View,
   Image,
-  ImageBackground,
 } from 'react-native';
 import AppText from '../Components/AppText';
-// import ItemCard from '../Components/CategoryListCard';
+import ItemCard from '../Components/CategoryListCard';
 import OptionList from '../Components/OptionList';
 import SearchBar from '../Components/SearchBar';
 import colors from '../Config/colors';
@@ -97,21 +96,20 @@ const CategoriesScreen = () => {
         />
       </View>
       <View style={styles.categoryItemsContainer}>
-        {/* <FlatList
+        <FlatList
           showsVerticalScrollIndicator={false}
-          data={DATA}
+          data={data}
           renderItem={({item}) => (
             <ItemCard
               title={item.title}
-              quantity={item.quantity}
+              price={item.price}
               image={item.image}
               onPress={() => {}}
             />
           )}
           keyExtractor={item => item.id.toString()}
-          numColumns={2}
-          ItemSeparatorComponent={() => <View style={styles.seperator} />}
-        /> */}
+          ItemSeparatorComponent={() => <View style={{height: 22}} />}
+        />
       </View>
     </SafeAreaView>
   );
@@ -142,9 +140,10 @@ const styles = StyleSheet.create({
   },
   optiosContainer: {
     flex: 0.7,
+    marginBottom: 10,
   },
   categoryItemsContainer: {
-    backgroundColor: 'green',
+    // backgroundColor: 'green',
     flex: 3,
   },
   seperator: {
