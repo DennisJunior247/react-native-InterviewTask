@@ -87,7 +87,6 @@ const CategoriesScreen = () => {
           )}
           keyExtractor={item => item.id.toString()}
           numColumns={2}
-          ItemSeparatorComponent={() => <View style={styles.seperator} />}
         />
       </View>
     </SafeAreaView>
@@ -113,10 +112,5 @@ const styles = StyleSheet.create({
   categoryItemsContainer: {
     backgroundColor: colors.primary,
     flex: 3,
-  },
-  seperator: {
-    width: '100%',
-    height: 40,
-    backgroundColor: colors.primary,
   },
 });

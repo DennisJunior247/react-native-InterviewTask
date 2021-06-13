@@ -53,8 +53,8 @@ const CategoryCard = ({title, price, image, onPress}: PropsType) => {
                 height: 50,
                 borderRadius: 10,
                 borderColor: colors.grey,
-                // elevation: 1,
-                borderWidth: 1,
+                elevation: 1,
+                borderWidth: 0.5,
                 padding: 0,
               }}
               width={'40%'}
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     height: 170,
     flexDirection: 'row',
     backgroundColor: colors.primary,
-    // marginRight: 20,
+    marginBottom: 22,
   },
   imageContainer: {
     width: '50%',
@@ -102,13 +102,11 @@ const styles = StyleSheet.create({
     borderRadius: 13,
   },
   asideContainer: {
-    // backgroundColor: 'red',
     width: '50%',
   },
   textContainer: {
     height: '50%',
-    padding: 10,
-    // paddingVertical: 5,
+    padding: 20,
   },
   price: {
     color: colors.dark,
@@ -123,10 +121,9 @@ const styles = StyleSheet.create({
   },
   chartBtnContainer: {
     flexDirection: 'row',
-    // backgroundColor: 'red',
     height: '50%',
-    // width: '100%',
     justifyContent: 'space-around',
     alignItems: 'center',
+    paddingLeft: 10,
   },
 });

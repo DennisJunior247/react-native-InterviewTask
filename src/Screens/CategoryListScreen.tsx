@@ -108,7 +108,6 @@ const CategoriesScreen = () => {
             />
           )}
           keyExtractor={item => item.id.toString()}
-          ItemSeparatorComponent={() => <View style={{height: 22}} />}
         />
       </View>
     </SafeAreaView>
