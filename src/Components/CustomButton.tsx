@@ -14,6 +14,7 @@ interface Props {
   width: string | number;
   textColor: string;
   ButtonStyle?: ViewStyle;
+  icon?: JSX.Element;
 }
 
 const CustomButton = ({
@@ -23,12 +24,16 @@ const CustomButton = ({
   backgroundColor,
   width,
   textColor,
+  icon,
 }: Props) => {
   return (
     <TouchableOpacity
       style={[styles(backgroundColor, width).container, ButtonStyle]}
       onPress={onPress}>
-      <Text style={[styles().text, {color: textColor}]}>{title}</Text>
+      <Text style={[styles().text, {color: textColor}]}>
+        {icon &&<Text></Text>}
+        {title}
+      </Text>
     </TouchableOpacity>
   );
 };

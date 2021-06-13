@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     borderColor: colors.grey,
     borderWidth: 1.5,
     borderRadius: 40,
+    backgroundColor: colors.white,
   },
   iconBox: {
     width: '10%',

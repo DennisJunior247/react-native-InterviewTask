@@ -20,7 +20,7 @@ type datatype = {
   id?: number;
 }[];
 
-const DATA: datatype = [
+const data: datatype = [
   {
     title: 'Vegetables',
     quantity: 43,
@@ -76,7 +76,7 @@ const CategoriesScreen = () => {
       <View style={styles.categoryItemsContainer}>
         <FlatList
           showsVerticalScrollIndicator={false}
-          data={DATA}
+          data={data}
           renderItem={({item}) => (
             <ItemCard
               title={item.title}
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
     justifyContent: 'flex-end',
-    marginBottom: 50,
+    paddingBottom: 50,
   },
   searchBarContainer: {
     marginTop: 30,
