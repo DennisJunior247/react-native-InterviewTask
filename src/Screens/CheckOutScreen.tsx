@@ -8,6 +8,7 @@ import {
   Platform,
   TouchableWithoutFeedback,
   Text,
+  Switch,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -43,6 +44,9 @@ const deliveryOptions: {title: string; icon: string}[] = [
 
 const CheckOutScreen = () => {
   const [activeKey, setActiveKey] = useState('');
+  const [isEnabled, setIsEnabled] = useState(false);
+
+  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
   const handleActive = (key: string) => {
     setActiveKey(key);
@@ -84,6 +88,7 @@ const CheckOutScreen = () => {
           </View>
         ))}
       </View>
+
       <View style={styles.deliveryOption}>
         <View>
           <View style={styles.paymentMethodCard}>
@@ -143,6 +148,28 @@ const CheckOutScreen = () => {
             ))}
           </View>
         </View>
+        <View style={styles.nonContactDelivery}>
+          <AppText
+            text={'Non-contact-delivery'}
+            color={colors.dark}
+            fontSize={25}
+            fontWeight={'bold'}
+          />
+          <Switch
+            trackColor={{false: '#767577', true: `${colors.purple}`}}
+            thumbColor={isEnabled ? colors.purple : '#f4f3f4'}
+            onValueChange={toggleSwitch}
+            value={isEnabled}
+          />
+        </View>
+        <CustomButton
+          onPress={() => {}}
+          backgroundColor={colors.secondary}
+          title={'Proceed'}
+          ButtonStyle={{marginTop: 30}}
+          width={'100%'}
+          textColor={colors.white}
+        />
       </View>
     </SafeAreaView>
   );
@@ -182,5 +209,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '90%',
     justifyContent: 'space-between',
+  },
+  nonContactDelivery: {
+    marginTop: 10,
+    width: '100%',
+    // backgroundColor: 'red',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 10,
   },
 });
