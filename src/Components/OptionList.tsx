@@ -11,13 +11,25 @@ import colors from '../Config/colors';
 interface Props {
   title: string;
   onPress?: (event: GestureResponderEvent) => void;
+  active: string;
 }
 
-const OptionsList = ({title, onPress}: Props) => {
+const OptionsList = ({title, onPress, active}: Props) => {
   return (
     <TouchableWithoutFeedback onPress={onPress}>
-      <View style={[styles.textBox, styles.inactive]}>
-        <Text style={styles.colorInActive}>{title}</Text>
+      <View
+        style={[
+          styles.textBox,
+          active && active === title ? styles.active : styles.inactive,
+        ]}>
+        <Text
+          style={
+            active && active === title
+              ? styles.colorActive
+              : styles.colorInActive
+          }>
+          {title}
+        </Text>
       </View>
     </TouchableWithoutFeedback>
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   FlatList,
   ImageSourcePropType,
@@ -46,16 +46,22 @@ const data: datatype = [
 const optionsData: {title: string; id: number}[] = [
   {id: 1, title: 'Сabbage and lettuce (14)'},
   {id: 2, title: 'Сucumbers and tomatoes (10)'},
-  {id: 3, title: 'Oinons and garlic (8)'},
+  {id: 3, title: 'Garlic (8)'},
 ];
 const secondOptionsData: {title: string; id: number}[] = [
   {id: 4, title: 'Oinons and garlic (8)'},
   {id: 5, title: 'Peppers (7)'},
   {id: 6, title: 'Potatoes and carrots (4)'},
-  {id: 2, title: 'Сucumbers and tomatoes (10)'},
+  {id: 2, title: 'Tomatoes (10)'},
 ];
 
 const CategoriesScreen = () => {
+  const [activeKey, setActiveKey] = useState<string>('');
+
+  const handleActive = (key: string) => {
+    setActiveKey(key);
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.headerContainer}>
@@ -80,7 +86,11 @@ const CategoriesScreen = () => {
           data={optionsData}
           keyExtractor={item => item.id.toString()}
           renderItem={({item}) => (
-            <OptionList title={item.title} onPress={() => {}} />
+            <OptionList
+              title={item.title}
+              onPress={() => handleActive(`${item.title}`)}
+              active={activeKey}
+            />
           )}
           ItemSeparatorComponent={() => <View style={styles.seperator} />}
         />
@@ -90,7 +100,11 @@ const CategoriesScreen = () => {
           data={secondOptionsData}
           keyExtractor={item => item.id.toString()}
           renderItem={({item}) => (
-            <OptionList title={item.title} onPress={() => {}} />
+            <OptionList
+              title={item.title}
+              active={activeKey}
+              onPress={() => handleActive(`${item.title}`)}
+            />
           )}
           ItemSeparatorComponent={() => <View style={styles.seperator} />}
         />

@@ -77,6 +77,13 @@ const splashScreen = () => {
               ButtonStyle={styles.btn}
               width={'60%'}
               textColor={colors.white}
+              icon={
+                <MaterialIcon
+                  size="large"
+                  color="#FFFFFF"
+                  name="shoppingcart"
+                />
+              }
             />
           </View>
         </View>

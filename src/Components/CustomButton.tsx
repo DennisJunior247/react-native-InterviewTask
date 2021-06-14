@@ -30,10 +30,8 @@ const CustomButton = ({
     <TouchableOpacity
       style={[styles(backgroundColor, width).container, ButtonStyle]}
       onPress={onPress}>
-      <Text style={[styles().text, {color: textColor}]}>
-        {icon && <Text>{icon}</Text>}
-        {title}
-      </Text>
+      {icon && <Text style={{marginRight: 10}}>{icon}</Text>}
+      <Text style={[styles().text, {color: textColor}]}>{title}</Text>
     </TouchableOpacity>
   );
 };
@@ -46,6 +44,7 @@ const styles = (backgroundColor?: string, width?: string | number) =>
       width: width,
       alignItems: 'center',
       justifyContent: 'center',
+      flexDirection: 'row',
     },
     text: {
       fontSize: 20,
