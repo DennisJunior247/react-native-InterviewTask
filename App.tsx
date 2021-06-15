@@ -1,9 +1,14 @@
 import React from 'react';
-import {} from 'react-native';
-import Screen from './src/Screens/CheckOutScreen';
+import 'react-native-gesture-handler';
+import {NavigationContainer} from '@react-navigation/native';
+import Navigation from './src/Routes/HomeNavigator';
 
 const App = () => {
-  return <Screen />;
+  return (
+    <NavigationContainer>
+      <Navigation />
+    </NavigationContainer>
+  );
 };
 
 export default App;
