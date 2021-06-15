@@ -9,10 +9,13 @@ import {
   View,
   Image,
 } from 'react-native';
-import AppText from '../Components/AppText';
+import {StackNavigationProp} from '@react-navigation/stack';
+
+import {StackParamList} from '../Routes/AppNavigation/CategoryNavigator';
 import ItemCard from '../Components/CategoryListCard';
 import OptionList from '../Components/OptionList';
 import SearchBar from '../Components/SearchBar';
+import AppText from '../Components/AppText';
 import colors from '../Config/colors';
 
 type datatype = {
@@ -55,7 +58,16 @@ const secondOptionsData: {title: string; id: number}[] = [
   {id: 2, title: 'Tomatoes (10)'},
 ];
 
-const CategoriesScreen = () => {
+type ProfileScreenNavigationProp = StackNavigationProp<
+  StackParamList,
+  'CategoryListScreen'
+>;
+
+type Props = {
+  navigation: ProfileScreenNavigationProp;
+};
+
+const CategoriesScreen = ({navigation}: Props) => {
   const [activeKey, setActiveKey] = useState<string>('');
 
   const handleActive = (key: string) => {
@@ -118,7 +130,7 @@ const CategoriesScreen = () => {
               title={item.title}
               price={item.price}
               image={item.image}
-              onPress={() => {}}
+              onPress={() => navigation.navigate('ProductDetailScreen')}
             />
           )}
           keyExtractor={item => item.id.toString()}
@@ -144,8 +156,8 @@ const styles = StyleSheet.create({
   },
   bgImage: {
     position: 'absolute',
-    top: -6,
-    right: -12,
+    top: -60,
+    right: -10,
     zIndex: -1000,
   },
   searchBarContainer: {

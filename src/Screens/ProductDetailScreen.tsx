@@ -8,10 +8,11 @@ import {
   SafeAreaView,
   Text,
 } from 'react-native';
-import AppText from '../Components/AppText';
+
 import CustomButton from '../Components/CustomButton';
-import colors from '../Config/colors';
 import {MaterialIcon} from '../Components/Icon';
+import AppText from '../Components/AppText';
+import colors from '../Config/colors';
 
 const splashScreen = () => {
   return (

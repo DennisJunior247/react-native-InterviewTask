@@ -8,11 +8,20 @@ import {
   ImageBackground,
   SafeAreaView,
 } from 'react-native';
+import {StackNavigationProp} from '@react-navigation/stack';
 import AppText from '../Components/AppText';
 import CustomButton from '../Components/CustomButton';
 import colors from '../Config/colors';
 
-const splashScreen = () => {
+import {RootStackParamList} from '../Routes/HomeNavigator';
+
+type ScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
+
+type Props = {
+  navigation: ScreenNavigationProp;
+};
+
+const splashScreen = ({navigation}: Props) => {
   return (
     <SafeAreaView style={styles.container}>
       <ImageBackground
@@ -45,7 +54,7 @@ const splashScreen = () => {
           />
         </View>
         <CustomButton
-          onPress={() => {}}
+          onPress={() => navigation.navigate('AppNavigation')}
           backgroundColor={colors.secondary}
           title={'order now'}
           ButtonStyle={styles.btn}

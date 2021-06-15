@@ -8,6 +8,9 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
+import {StackNavigationProp} from '@react-navigation/stack';
+
+import {StackParamList} from '../Routes/AppNavigation/CategoryNavigator';
 import AppText from '../Components/AppText';
 import ItemCard from '../Components/CategoryCard';
 import SearchBar from '../Components/SearchBar';
@@ -59,7 +62,16 @@ const data: datatype = [
   },
 ];
 
-const CategoriesScreen = () => {
+type ProfileScreenNavigationProp = StackNavigationProp<
+  StackParamList,
+  'CategoriesScreen'
+>;
+
+type Props = {
+  navigation: ProfileScreenNavigationProp;
+};
+
+const CategoriesScreen = ({navigation}: Props) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.headerContainer}>
@@ -82,7 +94,7 @@ const CategoriesScreen = () => {
               title={item.title}
               quantity={item.quantity}
               image={item.image}
-              onPress={() => {}}
+              onPress={() => navigation.navigate('CategoryListScreen')}
             />
           )}
           keyExtractor={item => item.id.toString()}
@@ -103,8 +115,8 @@ const styles = StyleSheet.create({
   headerContainer: {
     flex: 1,
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
-    justifyContent: 'flex-end',
-    paddingBottom: 50,
+    // justifyContent: 'flex-end',
+    // paddingBottom: 50,
   },
   searchBarContainer: {
     marginTop: 30,
