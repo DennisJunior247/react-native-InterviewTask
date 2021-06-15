@@ -1,11 +1,11 @@
 import React from 'react';
 import {StyleSheet, TextInput, View, ViewStyle} from 'react-native';
 
-type Props<T> = {
+type Props = {
   InputStyle: ViewStyle;
   onChangeText: (e: string) => void;
   placeholder: string;
-  value: T;
+  value: string;
 };
 
 const Index = ({onChangeText, placeholder, value}: Props) => {
