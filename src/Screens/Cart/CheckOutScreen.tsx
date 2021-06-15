@@ -13,10 +13,10 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import CustomButton from '../Components/CustomButton';
-import {MaterialIcon} from '../Components/Icon';
-import AppText from '../Components/AppText';
-import colors from '../Config/colors';
+import CustomButton from '../../Components/CustomButton';
+import {MaterialIcon} from '../../Components/Icon';
+import AppText from '../../Components/AppText';
+import colors from '../../Config/colors';
 
 type dataType = {
   title: string;

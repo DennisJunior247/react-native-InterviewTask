@@ -9,10 +9,10 @@ import {
   Text,
 } from 'react-native';
 
-import CustomButton from '../Components/CustomButton';
-import {MaterialIcon} from '../Components/Icon';
-import AppText from '../Components/AppText';
-import colors from '../Config/colors';
+import CustomButton from '../../Components/CustomButton';
+import {MaterialIcon} from '../../Components/Icon';
+import AppText from '../../Components/AppText';
+import colors from '../../Config/colors';
 
 const splashScreen = () => {
   return (

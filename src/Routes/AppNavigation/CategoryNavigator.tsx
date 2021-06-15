@@ -1,9 +1,9 @@
 import * as React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import CategoriesScreen from '../../Screens/CategoriesScreen';
-import CategoryListScreen from '../../Screens/CategoryListScreen';
-import ProductDetailScreen from '../../Screens/ProductDetailScreen';
+import CategoriesScreen from '../../Screens/Category/CategoriesScreen';
+import CategoryListScreen from '../../Screens/Category/CategoryListScreen';
+import ProductDetailScreen from '../../Screens/Category/ProductDetailScreen';
 import colors from '../../Config/colors';
 
 export type StackParamList = {
