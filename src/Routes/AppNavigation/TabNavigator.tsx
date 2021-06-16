@@ -22,6 +22,7 @@ const AppNavigator = () => (
       activeTintColor: `${colors.purple}`,
       inactiveTintColor: `${colors.grey}`,
       showLabel: false,
+      keyboardHidesTabBar: true,
     }}>
     <Tab.Screen
       name="Category"

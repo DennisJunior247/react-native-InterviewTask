@@ -1,12 +1,13 @@
 import * as React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-// import CategoryListScreen from '../../Screens/CategoryListScreen';
+import CreditCard from '../../Screens/Cart/CreditCard';
 import CheckOutScreen from '../../Screens/Cart/CheckOutScreen';
+import colors from '../../Config/colors';
 
 export type StackParamList = {
   CheckOutScreen: undefined;
-  // CategoryListScreen: undefined;
+  CreditCard: undefined;
 };
 
 const Stack = createStackNavigator<StackParamList>();
@@ -19,11 +20,14 @@ function App() {
         component={CheckOutScreen}
         options={{headerTitle: 'Checkout', headerTitleAlign: 'center'}}
       />
-      {/* <Stack.Screen
-        name="CategoryListScreen"
-        component={CategoryListScreen}
-        options={{headerShown: false}}
-      /> */}
+      <Stack.Screen
+        name="CreditCard"
+        component={CreditCard}
+        options={{
+          headerTitle: '',
+          headerStyle: {backgroundColor: colors.primary},
+        }}
+      />
     </Stack.Navigator>
   );
 }

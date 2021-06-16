@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     borderColor: '#D9D0E3',
     borderWidth: 1,
     elevation: 1,
-    marginBottom: 40,
+    marginBottom: 30,
   },
   imageContainer: {
     width: '100%',

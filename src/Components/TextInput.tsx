@@ -46,11 +46,11 @@ export default Index;
 
 const styles = StyleSheet.create({
   wrapper: {
-    margin: 50,
+    marginTop: 10,
   },
   text: {
     padding: 10,
-    fontSize: 20,
+    fontSize: 18,
     color: colors.grey,
     textTransform: 'capitalize',
   },
@@ -60,24 +60,22 @@ const styles = StyleSheet.create({
     borderColor: '#D9D0E3',
     borderWidth: 2,
     borderRadius: 10,
-    // backgroundColor: 'green',
   },
   input: {
     width: '80%',
-    height: 50,
-    fontSize: 20,
+    height: 40,
+    fontSize: 17,
     color: '#2D0C57',
     padding: 10,
     marginLeft: 5,
-    // backgroundColor: 'pink',
-    // textTransform: 'capitalize',
+    textTransform: 'capitalize',
   },
   sideContainer: {
     width: '20%',
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
-    // backgroundColor: 'pink',
+    paddingRight: 5,
   },
   circle: {
     width: 25,

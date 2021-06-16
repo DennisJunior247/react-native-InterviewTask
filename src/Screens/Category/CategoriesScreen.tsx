@@ -81,7 +81,7 @@ const CategoriesScreen = ({navigation}: Props) => {
           fontSize={35}
           text={'Categories'}
         />
-        <View style={styles.searchBarContainer}>
+        <View style={styles.searchBox}>
           <SearchBar placeholder={'Search'} />
         </View>
       </View>
@@ -113,16 +113,13 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
   },
   headerContainer: {
-    flex: 1,
+    flex: 0.8,
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
-    // justifyContent: 'flex-end',
-    // paddingBottom: 50,
+    paddingBottom: 30,
   },
-  searchBarContainer: {
-    marginTop: 30,
-  },
+  searchBox: {marginTop: 20},
   categoryItemsContainer: {
-    backgroundColor: colors.primary,
     flex: 3,
+    paddingTop: 20,
   },
 });

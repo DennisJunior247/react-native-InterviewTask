@@ -43,7 +43,7 @@ const deliveryOptions: {title: string; icon: string}[] = [
   {title: 'By Drone', icon: 'airplane'},
 ];
 
-const CheckOutScreen = () => {
+const CheckOutScreen = ({navigation}) => {
   const [activeKey, setActiveKey] = useState('');
   const [isEnabled, setIsEnabled] = useState(false);
 
@@ -165,7 +165,7 @@ const CheckOutScreen = () => {
             />
           </View>
           <CustomButton
-            onPress={() => {}}
+            onPress={() => navigation.navigate('CreditCard')}
             backgroundColor={colors.secondary}
             title={'Proceed'}
             ButtonStyle={{marginTop: 30}}
@@ -188,13 +188,11 @@ const styles = StyleSheet.create({
   },
   paymentMethod: {
     flex: 1,
-    // backgroundColor: 'red',
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
   paymentMethodCard: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    // backgroundColor: 'green',
     paddingTop: 15,
   },
   detailsContainer: {
@@ -206,7 +204,6 @@ const styles = StyleSheet.create({
   },
   deliveryOptionCard: {
     flexDirection: 'row',
-    // backgroundColor: 'blue',
     marginTop: 25,
     padding: 10,
   },
@@ -218,7 +215,6 @@ const styles = StyleSheet.create({
   nonContactDelivery: {
     marginTop: 10,
     width: '100%',
-    // backgroundColor: 'red',
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding: 10,
