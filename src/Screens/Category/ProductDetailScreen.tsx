@@ -19,7 +19,7 @@ const splashScreen = () => {
     <SafeAreaView style={styles.container}>
       <ImageBackground
         style={styles.background}
-        source={require('../Assets/Bg1.png')}
+        source={require('../../Assets/Bg1.png')}
       />
       <View style={styles.textContainer}>
         <View>

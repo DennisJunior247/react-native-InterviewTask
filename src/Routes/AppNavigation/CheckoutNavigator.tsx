@@ -2,7 +2,7 @@ import * as React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
 // import CategoryListScreen from '../../Screens/CategoryListScreen';
-import CheckOutScreen from '../../Screens/CheckOutScreen';
+import CheckOutScreen from '../../Screens/Cart/CheckOutScreen';
 
 export type StackParamList = {
   CheckOutScreen: undefined;

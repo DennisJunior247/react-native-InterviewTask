@@ -27,37 +27,37 @@ const data: datatype = [
   {
     title: 'Vegetables',
     quantity: 43,
-    image: require('../Assets/categoryImages/Media.png'),
+    image: require('../../Assets/categoryImages/Media.png'),
     id: 1,
   },
   {
     title: 'Vegetables',
     quantity: 43,
-    image: require('../Assets/categoryImages/Media1.png'),
+    image: require('../../Assets/categoryImages/Media1.png'),
     id: 2,
   },
   {
     title: 'Vegetables',
     quantity: 43,
-    image: require('../Assets/categoryImages/Media2.png'),
+    image: require('../../Assets/categoryImages/Media2.png'),
     id: 3,
   },
   {
     title: 'Vegetables',
     quantity: 43,
-    image: require('../Assets/categoryImages/Media3.png'),
+    image: require('../../Assets/categoryImages/Media3.png'),
     id: 4,
   },
   {
     title: 'Vegetables',
     quantity: 43,
-    image: require('../Assets/categoryImages/Media4.png'),
+    image: require('../../Assets/categoryImages/Media4.png'),
     id: 5,
   },
   {
     title: 'Vegetables',
     quantity: 43,
-    image: require('../Assets/categoryImages/Media5.png'),
+    image: require('../../Assets/categoryImages/Media5.png'),
     id: 6,
   },
 ];

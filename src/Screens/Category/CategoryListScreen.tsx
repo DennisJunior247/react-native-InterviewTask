@@ -29,19 +29,19 @@ const data: datatype = [
   {
     title: 'Boston Lettuce ',
     price: 1.1,
-    image: require('../Assets/Media.png'),
+    image: require('../../Assets/Media.png'),
     id: 1,
   },
   {
     title: 'Purple Cauliflower',
     price: 1.85,
-    image: require('../Assets/Media1.png'),
+    image: require('../../Assets/Media1.png'),
     id: 2,
   },
   {
     title: 'Savoy Cabbage',
     price: 1.45,
-    image: require('../Assets/Media2.png'),
+    image: require('../../Assets/Media2.png'),
     id: 3,
   },
 ];
@@ -79,7 +79,7 @@ const CategoriesScreen = ({navigation}: Props) => {
       <View style={styles.headerContainer}>
         <Image
           style={styles.bgImage}
-          source={require('../Assets/Vector2.png')}
+          source={require('../../Assets/Vector2.png')}
         />
         <AppText
           color={colors.dark}

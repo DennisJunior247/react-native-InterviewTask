@@ -5,7 +5,7 @@ import AntIcons from 'react-native-vector-icons/FontAwesome';
 
 import CategoryScreen from './CategoryNavigator';
 import CheckoutScreen from './CheckoutNavigator';
-import Profile from '../../Screens/ProfileScreen';
+import Profile from '../../Screens/Profile/ProfileScreen';
 import colors from '../../Config/colors';
 
 type RootStackParamList = {
