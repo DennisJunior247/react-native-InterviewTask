@@ -1,21 +1,17 @@
 # react-native-InterviewTask
-this repo was created in other to replicate the design given in the first interview.
-
+This repo was created in other to replicate the design given in the first stage of the interview process.
 ## Available Scripts
 
 In the project directory, you can run:
 
 ### `yarn`
-To install all dependcies
+To install all node dependcies 
 
 ### `react native run andriod`
+
+To Install the app in your device or emulator.\
 ### `yarn start`
-
-Runs the app in the development mode.\
-Open emulator or divice to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To start the application and will reload if edited.
 
 ### `yarn test`
 
