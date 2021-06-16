@@ -1,16 +1,13 @@
 import React from 'react';
 import 'react-native-gesture-handler';
-// import {NavigationContainer} from '@react-navigation/native';
-// import Navigation from './src/Routes/HomeNavigator';
-
-import Screen from './src/Screens/Cart/CreditCard';
+import {NavigationContainer} from '@react-navigation/native';
+import Navigation from './src/Routes/HomeNavigator';
 
 const App = () => {
   return (
-    <Screen />
-    // <NavigationContainer>
-    //   <Navigation />
-    // </NavigationContainer>
+    <NavigationContainer>
+      <Navigation />
+    </NavigationContainer>
   );
 };
 
