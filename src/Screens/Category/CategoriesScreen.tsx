@@ -9,12 +9,12 @@ import {
   View,
 } from 'react-native';
 import {StackNavigationProp} from '@react-navigation/stack';
-
 import {StackParamList} from '../../Routes/AppNavigation/CategoryNavigator';
-import AppText from '../../Components/AppText';
-import ItemCard from '../../Components/CategoryCard';
-import SearchBar from '../../Components/SearchBar';
+
 import colors from '../../Config/colors';
+import AppText from '../../Components/AppText';
+import SearchBar from '../../Components/SearchBar';
+import ItemCard from '../../Components/CategoryCard';
 
 type datatype = {
   title: string;

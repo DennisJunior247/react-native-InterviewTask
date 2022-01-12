@@ -9,11 +9,11 @@ import {
   ScrollView,
 } from 'react-native';
 
-import CreditCardComponent from '../../Components/CreditCardComponent';
+import colors from '../../Config/colors';
 import AppText from '../../Components/AppText';
 import Input from '../../Components/TextInput';
-import colors from '../../Config/colors';
 import CustomButton from '../../Components/CustomButton';
+import CreditCardComponent from '../../Components/CreditCardComponent';
 
 const Index = () => {
   const [cardName, setcardName] = React.useState('Alexandra Smith');
