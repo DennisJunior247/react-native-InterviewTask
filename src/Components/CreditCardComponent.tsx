@@ -63,7 +63,7 @@ export default CreditCard;
 const styles = StyleSheet.create({
   card: {
     width: '100%',
-    height: 270,
+    height: 250,
     borderRadius: 15,
     marginTop: 20,
   },

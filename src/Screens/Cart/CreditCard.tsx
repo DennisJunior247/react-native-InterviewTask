@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   },
   cardContainer: {
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
-    flex: 0.9,
+    flex: 0.5,
   },
   cardDetails: {
     flex: 1,
